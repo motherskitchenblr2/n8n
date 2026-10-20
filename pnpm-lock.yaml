@@ -109,8 +109,8 @@ catalogs:
       specifier: 6.0.1
       version: 6.0.1
     simple-git:
-      specifier: 3.28.0
-      version: 3.28.0
+      specifier: 4.0.1
+      version: 4.0.1
     tsdown:
       specifier: ^0.16.5
       version: 0.16.5
@@ -1720,7 +1720,7 @@ importers:
         version: 0.8.5
       simple-git:
         specifier: 'catalog:'
-        version: 3.28.0
+        version: 4.0.1
       source-map-support:
         specifier: 0.5.21
         version: 0.5.21
@@ -3092,7 +3092,7 @@ importers:
         version: 2.1.0
       simple-git:
         specifier: 'catalog:'
-        version: 3.28.0
+        version: 4.0.1
       snowflake-sdk:
         specifier: 2.1.0
         version: 2.1.0(asn1.js@5.4.1)(encoding@0.1.13)
@@ -7609,6 +7609,12 @@ packages:
 
   '@sevinf/maybe@0.5.0':
     resolution: {integrity: sha512-ARhyoYDnY1LES3vYI0fiG6e9esWfTNcXcO6+MPJJXcnyMV3bim4lnFt45VXouV7y82F4x3YH8nOQ6VztuvUiWg==}
+
+  '@simple-git/args-pathspec@1.0.4':
+    resolution: {integrity: sha512-EtMX6XjRWSastG2SdkmSQByPtJ9dx/NIjnHbpQPCYt62j4RmSx5rgLTGpw0YCjF5h191gZOmBfheOT23cRSFdw==}
+
+  '@simple-git/argv-parser@2.0.0':
+    resolution: {integrity: sha512-wr5b8akZQKNXiShOfPA1wRECrG1X7IAwNRKiU24g4CxSxDHgNcc5c5tdfGuA3NEOyAwta5iAQ5b7UjyrqyRFtg==}
 
   '@sinclair/typebox@0.25.21':
     resolution: {integrity: sha512-gFukHN4t8K4+wVC+ECqeqwzBDeFeTzBXroBTqE6vcWrQGbEUpHO7LYdG0f4xnvYq4VOEwITSlHlp0JBAIFMS/g==}
@@ -16653,8 +16659,8 @@ packages:
   simple-get@4.0.1:
     resolution: {integrity: sha512-brv7p5WgH0jmQJr1ZDDfKDOSeWWg+OVypG99A/5vYGPqJ6pxiaHLy8nxtFjBA7oMa01ebA9gfh1uMCFqOuXxvA==}
 
-  simple-git@3.28.0:
-    resolution: {integrity: sha512-Rs/vQRwsn1ILH1oBUy8NucJlXmnnLeLCfcvbSehkPzbv3wwoFWIdtfd6Ndo6ZPhlPsCZ60CPI4rxurnwAa+a2w==}
+  simple-git@4.0.1:
+    resolution: {integrity: sha512-3OXqp9MDRL+IlkJz0qUkm7dZoxVi61xdX2RF8fOA2OHHA8BNAVD+UdiXZ+5VYkrYZZ31OCIcAm8F8xnHOSRmrg==}
 
   simple-lru-cache@0.0.2:
     resolution: {integrity: sha512-uEv/AFO0ADI7d99OHDmh1QfYzQk/izT1vCmu/riQfh7qjBVUUgRT87E5s5h7CxWCA/+YoZerykpEthzVrW3LIw==}
@@ -18149,8 +18155,8 @@ packages:
   vue-component-type-helpers@2.2.12:
     resolution: {integrity: sha512-YbGqHZ5/eW4SnkPNR44mKVc6ZKQoRs/Rux1sxC6rdwXb4qpbOSYfDr9DsTHolOTGmIKgM9j141mZbBeg05R1pw==}
 
-  vue-component-type-helpers@3.3.11:
-    resolution: {integrity: sha512-LwcxzeliO9fkQcpJG0PoX8X5kmAhKmH9wkpDLxNabwzkQ9Zeib2YVHwFV4pcWmMLfXVfjr/dSV+DaJ3cIPgSNA==}
+  vue-component-type-helpers@3.3.13:
+    resolution: {integrity: sha512-02KCxSmKDhIITjKyJ4QT5csP6L0WoRborLqY/34a40+S9uvMvdNgMV0yVjO3p2Gkz3ZoPmFz/0JsGHacwJYTxw==}
 
   vue-demi@0.14.10:
     resolution: {integrity: sha512-nMZBOwuzabUO0nLgIcc6rycZEebF6eeUfaiQx9+WSk8e29IbLvPU9feI6tqW4kTo3hvoYAJkMh8n8D0fuISphg==}
@@ -24117,6 +24123,12 @@ snapshots:
 
   '@sevinf/maybe@0.5.0': {}
 
+  '@simple-git/args-pathspec@1.0.4': {}
+
+  '@simple-git/argv-parser@2.0.0':
+    dependencies:
+      '@simple-git/args-pathspec': 1.0.4
+
   '@sinclair/typebox@0.25.21': {}
 
   '@sinclair/typebox@0.27.8': {}
@@ -24937,7 +24949,7 @@ snapshots:
       storybook: 9.1.7(@testing-library/dom@10.4.0)(bufferutil@4.0.9)(prettier@3.6.2)(utf-8-validate@5.0.10)(vite@7.0.0(@types/node@20.19.43)(jiti@2.6.1)(lightningcss@1.30.2)(sass@1.89.2)(terser@5.16.1)(tsx@4.19.3))
       type-fest: 2.19.0
       vue: 3.5.13(typescript@5.9.2)
-      vue-component-type-helpers: 3.3.11
+      vue-component-type-helpers: 3.3.13
 
   '@stylistic/eslint-plugin@5.0.0(eslint@9.29.0(jiti@2.6.1))':
     dependencies:
@@ -35451,11 +35463,13 @@ snapshots:
       once: 1.4.0
       simple-concat: 1.0.1
 
-  simple-git@3.28.0:
+  simple-git@4.0.1:
     dependencies:
       '@kwsites/file-exists': 1.1.1
       '@kwsites/promise-deferred': 1.1.1
-      debug: 4.4.1(supports-color@8.1.1)
+      '@simple-git/args-pathspec': 1.0.4
+      '@simple-git/argv-parser': 2.0.0
+      debug: 4.4.3
     transitivePeerDependencies:
       - supports-color
 
@@ -37245,7 +37259,7 @@ snapshots:
 
   vue-component-type-helpers@2.2.12: {}
 
-  vue-component-type-helpers@3.3.11: {}
+  vue-component-type-helpers@3.3.13: {}
 
   vue-demi@0.14.10(vue@3.5.13(typescript@5.9.2)):
     dependencies:
